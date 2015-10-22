@@ -1,0 +1,11 @@
+producer:
+  build: ./hazelcast-producer/
+  
+consumer1:
+  build: ./hazelcast-consumer/
+
+consumer2:
+  build: ./hazelcast-consumer/
+
+consumer3:
+  build: ./hazelcast-consumer/
