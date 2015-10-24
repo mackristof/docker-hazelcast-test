@@ -1,0 +1,10 @@
+windows:
+  - name: hazelcast-test
+    root: ./
+    layout: tiled
+    panes:
+      - docker-compose start
+      - docker-compose logs producer
+      - docker-compose logs consumer1
+      - docker-compose logs consumer2
+      - docker-compose logs consumer3
