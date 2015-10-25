@@ -32,13 +32,13 @@ RUN java -version
 RUN useradd -ms /bin/bash user_test
 
 # declare data filesystem volumes
-# VOLUME ["/home/user_test/"]
+VOLUME ["/home/user_test/jar/", "/home/user_test/data/"]
 
 # copy jar
-COPY ./target/hazelcast-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar /home/user_test/consumer.jar
+# COPY ./target/hazelcast-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar /home/user_test/consumer.jar
 
 # define user who run the tomcat instance
 USER user_test
 
 # start the tomcat instance
-CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/home/user_test/consumer.jar"]
+CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/home/user_test/jar/hazelcast-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar"]

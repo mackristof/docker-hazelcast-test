@@ -1,11 +1,23 @@
 producer:
   build: ./hazelcast-producer/
+  volumes:
+      - ./hazelcast-producer/target:/home/user_test/jar
+      - ./data:/home/user_test/data
   
 consumer1:
   build: ./hazelcast-consumer/
+  volumes:
+    - ./hazelcast-consumer/target:/home/user_test/jar
+    - ./data:/home/user_test/data
 
 consumer2:
   build: ./hazelcast-consumer/
+  volumes:
+      - ./hazelcast-consumer/target:/home/user_test/jar
+      - ./data:/home/user_test/data
 
 consumer3:
   build: ./hazelcast-consumer/
+  volumes:
+      - ./hazelcast-consumer/target:/home/user_test/jar
+      - ./data:/home/user_test/data

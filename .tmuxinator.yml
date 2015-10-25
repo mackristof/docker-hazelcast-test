@@ -23,9 +23,9 @@ root: ./
 
 windows:
   - hazelcast-window:
-      layout: main-vertical
+      layout: even-vertical
       panes:
-        - docker-compose start
+        - docker-compose up -d
         - docker-compose logs producer
         - docker-compose logs consumer1
         - docker-compose logs consumer2
